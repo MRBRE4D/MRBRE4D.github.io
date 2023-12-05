@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 447px;
+  height: 453px;
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border: 1px solid #a3a3a3;
+  margin-bottom: 30px;
+}
+
+.item {
+  width: 100%;
+  height: 100%;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.thumbnails {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+}
+
+.thumbnails li {
+  list-style: none;
+}
+
+.nimg {
+  width: 60px;
+  margin: 0;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border: 0.5px solid #a3a3a3;
+}/*# sourceMappingURL=carouselPid.module.css.map */

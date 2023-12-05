@@ -1,0 +1,77 @@
+.cardTop {
+  width: 172px;
+  height: 172px;
+  position: relative;
+}
+
+.cardTop>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardImg {
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+}
+
+.strayNickName {
+  width: 100px;
+  background-color: #ffc876;
+  text-align: center;
+  position: absolute;
+  top: 8px;
+  left: -20px;
+  border-radius: 2rem;
+  padding: 3px 0;
+  color: #fffaec;
+}
+
+.cardIntroduce {
+  text-align: center;
+  width: 244px;
+  height: 224px;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 5px gray;
+  padding: 0 10px;
+  padding-top: 40px;
+  padding-bottom: 15px;
+  margin-bottom: 2px;
+  background-color: white;
+}
+.cardIntroduceText {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: .6rem;
+}
+
+.cardIntroduceText > h3 {
+  color: #ae80c3;
+  font-weight: bolder;
+}
+
+.cardIntroduceText > h6 {
+  color: #cf9a70;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+}
+
+.cardIntroduceBtn {
+  width: 156px;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bolder;
+  background-color: #ffc876;
+  border-radius: 2rem;
+  margin-top: 10px;
+  border: 0;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  letter-spacing: 3px;
+  color: #fffaec;
+}
+
+.cardIntroduceBtn:hover{
+  background-color:#ae80c3 ;
+  transition: all 0.5s;
+}

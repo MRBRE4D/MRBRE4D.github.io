@@ -1,0 +1,175 @@
+// 檔案位置: styles/global.scss
+// 變數覆蓋用 (Variable overrides)
+// 全站配色 colors
+$primary: #ae80c3;
+$secondary: #ffc876;
+$success: #80c7a7;
+$danger: #f75454;
+
+// 按鈕圓角邊 button radius
+$border-radius-s: 0.2em;
+$border-radius-m: 0.2em;
+$border-radius-l: 0.2em;
+
+
+// 固定card高度
+// https://getbootstrap.com/docs/5.3/components/card/#grid-cards
+$card-height: 100%;
+
+// ↑↑↑  變數覆蓋(Variable overrides) 要寫在這行"上面"  ↑↑↑
+// 這裡導入所有 bootstrap 樣式
+// 最後營運階段(實務)可以用部份導入來進行最佳化
+// 參考: https://getbootstrap.com/docs/5.3/customize/sass/#importing
+@import '~bootstrap/scss/bootstrap';
+// ↓↓↓  其它客製樣式要寫在這行的"下面" ↓↓↓
+$primary-light: #c6add1;
+$primary-deep: #934291;
+$primary-dark: #3b1a54;
+$secondary-pale: #fffaec;
+$secondary-light: #ffe382;
+$secondary-deep: #eec373;
+$secondary-dark: #584438;
+$gold-light: #dbd0a2;
+$gold: #c2b075;
+$pink: #ffcccc;
+$success-deep: #3f9896;
+$gray-light: #c4c4c4;
+$gray: #a3a3a3;
+$gray-deep: #696969;
+$pet-1th: #f084d8;
+$pet-2th: #81e1d0;
+$pet-3th: #ffe999;
+$pet-4th: #90d7f5;
+
+// bs5內建圖示字體
+// 如果有使用其它圖示字體可以註解不使用
+@import '~bootstrap-icons/font/bootstrap-icons';
+
+// Zen Maru Gothic 字體
+// google Noto Sans TC 字體
+@import 'https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;200;300;400;500;600;700&family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap';
+
+// fixed for __next root div
+#__next {
+  flex-direction: column;
+  height: 100%;
+  display: flex;
+}
+// 阻擋錯誤訊息
+
+nextjs-portal {
+  display: none;
+}
+main > .container {
+  padding: 60px 15px 0;
+}
+.mt-80 {
+  margin-top: 80px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+.mt-120 {
+  margin-top: 120px;
+}
+.mt-80 {
+  margin-top: 80px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+.mt-120 {
+  margin-top: 120px;
+}.mt-80 {
+  margin-top: 80px;
+}
+.mt-100 {
+  margin-top: 100px;
+}
+.mt-120 {
+  margin-top: 120px;
+}
+
+.mb-80 {
+  margin-bottom: 80px;
+}
+
+.mt-120{
+  margin-top:120px;
+}
+
+body {
+  font-family: 'Noto Sans TC Regular', Helvetica, Arial, 'PingFang TC',
+    '苹方-繁', 'Heiti TC', '黑體-繁', 'Microsoft JhengHei', '微軟正黑體',
+    // Cross-platform generic font family (default user interface font)
+    system-ui,
+    // Safari for macOS and iOS (San Francisco)
+    -apple-system,
+    // Windows
+    'Segoe UI',
+    // Android
+    Roboto,
+    // Basic web fallback
+    'Helvetica Neue',
+    Arial,
+    // Linux
+    'Noto Sans',
+    'Liberation Sans',
+    // Sans serif fallback
+    sans-serif,
+    // Emoji fonts
+    'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+.h0,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+}
+
+.h0 {
+  font-size: 3.2rem;
+  font-weight: 500;
+  line-height: 6rem;
+  letter-spacing: 0.4rem;
+  text-align: center;
+}
+
+h5 {
+  line-height: 2rem;
+}
+h6 {
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 14px;
+  font-weight: bold;
+  letter-spacing: .05rem;
+}
+// 表單控制項--------------------------------------------------
+
+.form-member {
+  max-width: 330px;
+  padding: 1rem;
+}
+
+// 陰影效果---------------------------------------------------
+.shadow-light {
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+}
+
+.shadow-heavy {
+  box-shadow: 0px 6px 12px -2px rgba(50, 50, 93, 0.25),
+    0px 3px 7px -3px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-hover {
+  box-shadow: 0px 50px 100px -20px rgba(0, 0, 0, 0.2),
+    0px 30px 60px -30px rgba(0, 0, 0, 0.2);
+}
+// below is test only

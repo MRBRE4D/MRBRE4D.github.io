@@ -1,0 +1,491 @@
+@import './globals.scss';
+
+.block-pet-tab {
+  width: 100%;
+  background: rgb(164, 164, 164);
+background: linear-gradient(0deg, rgb(221, 221, 221) 0%, rgba(113, 113, 113, 0) 20%);
+}
+
+.block-pet-tab{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 100%;
+  // border-bottom: 2px solid $gray-light;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  letter-spacing: .05rem;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  cursor: pointer;
+
+}
+
+.pet-tab{
+  width: 8rem;
+  text-align: center;
+  font-size: 1.125rem;
+  border-radius: 12px 12px 0 0  ;
+  background-color: $secondary;
+  padding-top: .6rem;
+  padding-bottom: .4rem;
+  margin-right: 1.25rem;
+  color: white;
+
+  &--active{
+    background-color: $primary;
+    padding: .8rem 0;
+  }
+}
+
+.pet-tab:not(.pet-tab--active):hover{
+  padding: .7rem 0;
+  opacity: .8;
+  // transition: all 0.5s;
+}
+
+
+
+
+// 健康卡片 ---------------------------------------------------------
+.health-card {
+  width: 12.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-right: 1.5rem;
+  border-radius: 16px;
+  // background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+}
+
+.state-title {
+  font-size: 1.2rem;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: $gray-deep;
+}
+.state-text-ok {
+  color: $gray-deep;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-weight: 500;
+}
+
+.state-text-warning {
+  color: $secondary-deep;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-weight: 500;
+}
+// 藥物卡片------------------------------------------------------------
+.medicine-card {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border-radius: 16px;
+  // background-color: aquamarine;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  box-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+.medicine-tool {
+  width: 100%;
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+.test {
+  color: #3b3b3b;
+}
+.medicine-btn-edit {
+  font-size: 1.2rem;
+  color: $gray;
+  cursor: pointer;
+}
+.medicine-btn-edit:hover {
+  color: $primary;
+}
+
+.medicine-item {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  width: 100%;
+  color: $gray-deep;
+}
+.medicine-item ol {
+  padding-left: 1.2rem;
+}
+
+.medicine-item li {
+  list-style-type: auto;
+}
+// sweetalert2--------------------------------------------------------
+.container-alert-pet-photo {
+  width: 8.5rem;
+  height: 8.5rem;
+}
+
+.alert-pet-photo {
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.alert-pet-name {
+  font-size: 1.5rem;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-weight: 500;
+  color: $secondary-dark;
+  margin-top: 0.5rem;
+}
+
+// 圖表區--------------------------------------------------------------
+.health-title {
+  color: $secondary-dark;
+}
+
+.legend-group {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin-right: 0.75rem;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.legend-text {
+  color: $gray-deep;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+}
+
+.legend-icon-awake,
+.legend-icon-sleep {
+  width: 18px;
+  height: 18px;
+
+  margin-right: 0.4rem;
+}
+.legend-icon-awake {
+  background-color: #ffc83e;
+}
+
+.legend-icon-sleep {
+  background-color: $primary;
+}
+
+// 狀態動畫------------------------------------------------------------
+.f-modal-alert {
+  width: 100%;
+  height: 100%;
+}
+
+.f-modal-alert .f-modal-icon {
+  border-radius: 50%;
+  border: 4px solid $primary-light;
+  box-sizing: content-box;
+  height: 80px;
+  margin: 20px auto;
+  padding: 0;
+  position: relative;
+  width: 80px;
+
+  // Success icon
+  &.f-modal-success {
+    border-color: $primary-light;
+
+    &:after {
+      background-color: #ffffff;
+      content: '';
+      height: 120px;
+      position: absolute;
+      transform: rotate(45deg);
+      width: 60px;
+    }
+
+    &:after {
+      border-radius: 0 120px 120px 0;
+      left: 30px;
+      top: -11px;
+      transform-origin: 0 60px;
+      transform: rotate(-45deg);
+    }
+
+    .f-modal-placeholder {
+      border-radius: 50%;
+      border: 4px solid rgba(223, 154, 255, 0.2);
+      box-sizing: content-box;
+      height: 80px;
+      left: -4px;
+      position: absolute;
+      top: -4px;
+      width: 80px;
+      z-index: 2;
+    }
+
+    .f-modal-line {
+      background-color: $primary;
+      border-radius: 2px;
+      display: block;
+      height: 5px;
+      position: absolute;
+      z-index: 2;
+
+      &.f-modal-tip {
+        left: 14px;
+        top: 46px;
+        transform: rotate(45deg);
+        width: 25px;
+      }
+
+      &.f-modal-long {
+        right: 8px;
+        top: 38px;
+        transform: rotate(-45deg);
+        width: 47px;
+      }
+    }
+  }
+
+  // Warning icon
+  &.f-modal-warning {
+    border-color: $secondary;
+
+    &:before {
+      animation: pulseWarning 2s linear infinite;
+      background-color: #fff;
+      border-radius: 50%;
+      content: '';
+      display: inline-block;
+      height: 100%;
+      opacity: 0;
+      position: absolute;
+      width: 100%;
+    }
+
+    &:after {
+      background-color: #fff;
+      border-radius: 50%;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+
+  &.f-modal-warning .f-modal-body {
+    background-color: $secondary;
+    border-radius: 2px;
+    height: 47px;
+    left: 50%;
+    margin-left: -2px;
+    position: absolute;
+    top: 10px;
+    width: 5px;
+    z-index: 2;
+  }
+
+  &.f-modal-warning .f-modal-dot {
+    background-color: $secondary;
+    border-radius: 50%;
+    bottom: 10px;
+    height: 7px;
+    left: 50%;
+    margin-left: -3px;
+    position: absolute;
+    width: 7px;
+    z-index: 2;
+  }
+
+  .f-modal-icon {
+    margin-top: 50px;
+  }
+}
+
+.animateSuccessTip {
+  animation: animateSuccessTip 0.75s;
+}
+
+.animateSuccessLong {
+  animation: animateSuccessLong 0.75s;
+}
+
+.f-modal-icon.f-modal-success.animate:after {
+  animation: rotatePlaceholder 2s ease-in infinite;
+}
+
+.animateXLeft {
+  animation: animateXLeft 0.75s;
+}
+
+.animateXRight {
+  animation: animateXRight 0.75s;
+}
+
+.scaleWarning {
+  animation: scaleWarning 0.75s infinite alternate;
+}
+
+.pulseWarningIns {
+  animation: pulseWarningIns 0.75s infinite alternate;
+}
+
+@keyframes animateSuccessTip {
+  0%,
+  54% {
+    width: 0;
+    left: 1px;
+    top: 19px;
+  }
+
+  70% {
+    width: 50px;
+    left: -8px;
+    top: 37px;
+  }
+
+  84% {
+    width: 17px;
+    left: 21px;
+    top: 48px;
+  }
+
+  100% {
+    width: 25px;
+    left: 14px;
+    top: 45px;
+  }
+}
+
+@keyframes animateSuccessLong {
+  0%,
+  65% {
+    width: 0;
+    right: 46px;
+    top: 54px;
+  }
+
+  84% {
+    width: 55px;
+    right: 0;
+    top: 35px;
+  }
+
+  100% {
+    width: 47px;
+    right: 8px;
+    top: 38px;
+  }
+}
+
+@keyframes rotatePlaceholder {
+  0%,
+  10% {
+    transform: rotate(-45deg);
+  }
+
+  100%,
+  80% {
+    transform: rotate(315deg);
+  }
+}
+
+@keyframes animateXLeft {
+  0%,
+  65% {
+    left: 82px;
+    top: 95px;
+    width: 0;
+  }
+
+  84% {
+    left: 14px;
+    top: 33px;
+    width: 47px;
+  }
+
+  100% {
+    left: 17px;
+    top: 37px;
+    width: 47px;
+  }
+}
+
+@keyframes animateXRight {
+  0%,
+  65% {
+    right: 82px;
+    top: 95px;
+    width: 0;
+  }
+
+  84% {
+    right: 14px;
+    top: 33px;
+    width: 47px;
+  }
+
+  100% {
+    right: 16px;
+    top: 37px;
+    width: 47px;
+  }
+}
+
+@keyframes scaleWarning {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseWarning {
+  0% {
+    background-color: #fff;
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  30% {
+    background-color: #fff;
+    transform: scale(1);
+    opacity: 0.5;
+  }
+
+  100% {
+    background-color: #f8bb86;
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulseWarningIns {
+  0% {
+    background-color: #f8d486;
+  }
+
+  100% {
+    background-color: #f8bb86;
+  }
+}

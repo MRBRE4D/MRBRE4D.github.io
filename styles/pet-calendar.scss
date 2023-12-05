@@ -1,0 +1,359 @@
+@import 'globals.scss';
+
+.block-search {
+  width: calc(100% / 3);
+}
+
+.search-event {
+  width: 12rem;
+  height: 32px;
+  padding-left: 28px;
+  border-radius: 0.5em;
+  border: solid 1px $gray;
+  background-image: url(/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: left 8px center;
+  outline: 0;
+  font-size: 0.8rem;
+}
+
+.search-event:focus {
+  border: solid 1.8px $primary;
+}
+
+
+
+
+.block-select-month {
+  width: calc(100% / 3);
+}
+
+.year-focus {
+  margin-bottom: 0px;
+  color: $gray;
+}
+.mouth-focus {
+  margin-bottom: 0px;
+  width: 10rem;
+  text-align: center;
+  color: $primary;
+}
+
+.btn-month {
+  border: 0px;
+  background-color: transparent;
+  font-size: 1.2rem;
+  color: $gray-light;
+}
+.btn-month:hover {
+  color: $primary;
+}
+
+.block-btn {
+  width: calc(100% / 3);
+  text-align: right;
+}
+
+// 日曆 -------------------------------------------------------------------
+.today {
+  background: rgb(199, 148, 211);
+  background: linear-gradient(
+    0deg,
+    $secondary-pale 0%,
+    rgba(224, 190, 240, 1) 100%
+  );
+}
+.today .date-num {
+  color: white;
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.calendar-th {
+  width: 100%;
+  height: 3.75rem;
+  text-align: center;
+  border-bottom: 2.6px solid $primary;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+
+.calendar-th-now {
+  width: 100%;
+  height: 3.75rem;
+  text-align: center;
+  border-bottom: 2.6px solid $primary;
+  font-size: 1rem;
+  font-weight: bold;
+  color: $primary;
+}
+.calendar-tr {
+}
+.calendar-td {
+  position: relative;
+  border: 1px solid $gray;
+  box-sizing: border-box;
+  padding: 0px;
+}
+
+.calendar-td:hover {
+  // background-color: rgb(245, 245, 245);
+}
+
+.calendar-td:hover::after {
+  content: '＋ 新增行程';
+  color: $primary-dark;
+  opacity: 0.6;
+  position: absolute;
+  top: 0.75rem;
+  left: 0.4rem;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.calendar-date-box {
+  width: 8rem;
+  height: 8rem;
+  // background-color: blue;
+}
+
+.date-num {
+  border-left: 1px solid $gray;
+  border-bottom: 1px solid $gray;
+  box-sizing: border-box;
+  width: 2.5rem;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: $primary;
+}
+
+.pet-id {
+  border-radius: 50%;
+  width: 0.8rem;
+  height: 0.8rem;
+  margin-right: 0.125rem;
+  display: inline-block;
+  position: relative;
+  top: 0.125rem;
+}
+
+.pet-id-1{
+  background-color: $pet-1th;
+}
+.pet-id-2{
+  background-color: $pet-2th;
+}
+.pet-id-3{
+  background-color: $pet-3th;
+}
+.pet-id-4{
+  background-color: $pet-4th;
+}
+
+.event-box {
+  position: relative;
+  width: 100%;
+  padding: 2px 0.5rem;
+  margin-bottom: 0.25rem;
+  border: 0px;
+  background-color: transparent;
+  font-size: 0.8rem;
+  text-align: left;
+  line-height: 1rem;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.event-box:hover {
+  box-shadow: 0px 1px 2px $gray;
+}
+
+// 新增行程 alert----------------------------------------------------
+#datepicker {
+  display: inline-block;
+}
+
+.swal2-title {
+  margin-top: 1rem;
+}
+
+.swal2-html-container {
+  font-size: 1rem;
+}
+
+.custom-swal-class {
+  overflow-x: visible;
+  overflow-y: visible;
+  max-height: 550px !important;
+  min-height: 550px !important;
+}
+
+.event-label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $primary;
+}
+
+.event-input {
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 2rem;
+  border-radius: 0.5em;
+  border: solid 1px $gray;
+  background-repeat: no-repeat;
+  background-position: left 8px center;
+  outline: 0;
+  font-size: 1rem;
+}
+
+.event-textarea {
+  padding-left: 8px;
+  padding-right: 8px;
+  height: 3.75rem;
+  border-radius: 0.5em;
+  border: solid 1px $gray;
+  background-repeat: no-repeat;
+  background-position: left 8px center;
+  outline: 0;
+  font-size: 1rem;
+}
+
+// 顯示行程popover----------------------------------------------------
+.popover-block-container {
+  .popover-icon {
+    background: none;
+    color: none;
+    border: none;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+  }
+}
+.popover-header {
+  display: none;
+}
+
+.popover {
+  max-width: 306.6px;
+  border-radius: 6px;
+  border: none;
+  box-shadow: 0 0 6px 1px #eee;
+}
+.popover-body {
+  position: relative;
+  z-index: 2;
+  .popover-close {
+    position: absolute;
+    z-index: 3;
+    font-size: 1rem;
+    top: 0.25rem;
+    right: 0.25rem;
+    border: 0;
+    background-color: transparent;
+    color: $primary;
+  }
+
+  // 靜態資料
+  .container-event-normal {
+    margin: auto 1rem;
+    font-size: 1rem;
+    display: block;
+  }
+  .event-date {
+    font-size: 0.6rem;
+    color: $gray;
+  }
+  .event-title {
+    color: $primary;
+    font-weight: 500;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 0.5rem;
+  }
+
+  .event-detail {
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-event {
+    font-size: 1rem;
+    border: 0;
+    background-color: transparent;
+    color: $gray;
+  }
+  .btn-event:hover {
+    color: $primary;
+  }
+
+  // 開啟編輯器
+  .container-event-edit {
+    margin: auto 1rem;
+    font-size: 1rem;
+    display: none;
+  }
+
+  .event-intro{
+    font-size: 1.2rem;
+    color: $primary;
+    font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+    font-weight: 500;
+    border-bottom: 1px solid $gray;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .event-date-edit {
+    font-size: 0.6rem;
+    color: $gray;
+  }
+  .event-title-edit {
+    // color: $primary;
+    // font-weight: 500;
+    margin-top: 0.5rem;
+    // border-bottom: 1px solid $gray;
+    resize: none;
+  }
+
+
+  .event-detail-edit {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    height: 7.5rem
+  }
+
+  .event-tool-edit{
+    text-align: right;
+  }
+
+
+  .btn-event-edit-cancel {
+    font-size: 1rem;
+    border: 0;
+    background-color: transparent;
+    color: $gray;
+  }
+  .btn-event-edit-cancel:hover {
+    color: $danger;
+  }
+
+  .btn-event-edit-check {
+    font-size: 1rem;
+    border: 0;
+    background-color: transparent;
+    color: $gray;
+  }
+  .btn-event-edit-check:hover {
+    color: $success;
+  }
+
+
+}
+
+// 日曆 datepicker-----------------------------------------------

@@ -1,0 +1,30 @@
+.webContent {
+  height: 200px;
+  width: 300px;
+  position: relative;
+  word-wrap: break-word;
+}
+
+.webInput {
+  position: absolute;
+  bottom: 0;
+}
+
+.webMessage {
+  height: 130px;
+  overflow-y: scroll;
+}
+
+.webSendBtn {
+  width: 116px;
+  text-align: center;
+  padding: 8px 0;
+  font-weight: bolder;
+  background-color: #ffc876;
+  border-radius: 2rem;
+  margin-top: 10px;
+  border: 0;
+  font-family: "Zen Maru Gothic", "Noto Sans TC Regular";
+  letter-spacing: 3px;
+  color: #fffaec;
+}/*# sourceMappingURL=websocket.module.css.map */

@@ -1,0 +1,323 @@
+@import './globals.scss';
+// sidebar toggle
+// https://github.com/StartBootstrap/startbootstrap-simple-sidebar
+#wrapper {
+  overflow-x: hidden;
+}
+
+#sidebar-wrapper {
+  min-height: 100vh;
+  margin-left: -17rem;
+  -webkit-transition: margin 0.25s ease-out;
+  -moz-transition: margin 0.25s ease-out;
+  -o-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+// #sidebar-wrapper .sidebar-heading {
+//   padding: 0.875rem 1.25rem;
+//   font-size: 1.2rem;
+// }
+
+#sidebar-wrapper {
+  width: 17rem;
+}
+
+#page-content-wrapper {
+  min-width: 100vw;
+}
+
+body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+  margin-left: -18rem;
+}
+
+@media (min-width: 768px) {
+  #sidebar-wrapper {
+    margin-left: 0;
+  }
+
+  #page-content-wrapper {
+    min-width: 0;
+    width: 100%;
+  }
+
+  body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
+    margin-left: -18rem;
+  }
+}
+
+// 圓型按鈕 btn-circle
+.btn-circle.btn-xl {
+  width: 70px;
+  height: 70px;
+  padding: 10px 16px;
+  border-radius: 35px;
+  font-size: 24px;
+  line-height: 1.33;
+}
+
+.btn-circle {
+  width: 30px;
+  height: 30px;
+  padding: 6px 0px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 1.42857;
+}
+
+.w-350 {
+  /* width: 350px; */
+  width: 100%;
+}
+
+.w-350 img {
+  width: 100%;
+}
+
+.card-text {
+  font-weight: 500;
+  margin-bottom: 0.15rem;
+}
+
+.note-text {
+  color: rgb(158, 53, 0);
+}
+
+.type-text {
+  color: rgb(117, 117, 117);
+  font-weight: normal;
+}
+
+/* override by css variable */
+.no-border {
+  --bs-border-width: 0;
+}
+
+/*  card-body override */
+.no-space-x {
+  padding: var(--bs-card-spacer-y) 0;
+}
+
+.origin-p {
+  margin-bottom: 0;
+}
+
+/* grid list */
+.toolbar {
+  font-size: 16px;
+  font-weight: normal;
+  margin-right: 10px;
+}
+
+.toolbar i {
+  font-size: 18px;
+}
+
+/* sidebar */
+div.scroll {
+  width: 100%;
+  height: 80vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-align: left;
+  padding: 10px;
+}
+
+.cats {
+  border-bottom: 0.05rem solid gray;
+  min-height: 200px;
+}
+
+.color-f {
+  font-size: 10px;
+  text-align: center;
+}
+
+/* always show scrollbars */
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+}
+
+.h-now {
+  font-size: 16px;
+  color: rgb(17, 17, 17);
+  font-weight: 500;
+}
+
+.f-12 {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+// .thumbnails {
+//   display: flex;
+//   flex-direction: column;
+//   line-height: 0;
+//   list-style: none;
+// }
+// .thumbnails li {
+//   flex: auto;
+//   margin-bottom: 10px;
+// }
+// .thumbnails a {
+//   display: block;
+// }
+// .thumbnails img {
+//   width: 60px;
+//   height: 60px;
+//   /* object-fit: cover;
+//   object-position: top; */
+//   background: rgb(245, 245, 245);
+//   border-radius: 4px;
+//   /* width: 100%;
+//   height: 100%; */
+// }
+
+// .product-img {
+//   width: 520px;
+//   height: auto;
+// }
+
+// .product-desc {
+//   line-height: 30px;
+//   font-size: 18px;
+// }
+// ------------------------- PID ----- 
+// .product-right{
+// height: 500px;
+// }
+
+.pid-card{
+  margin-top: 100px;
+}
+.p-title{
+display: flex;
+justify-content: center;
+margin-bottom: 20px;
+}
+
+.p-cards{
+  border-bottom: 2px solid #a3a3a3;
+}
+.pf-p {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+  font-size: 0.8rem;
+  color: $gray;
+  margin-bottom: 5px;
+}
+.pf-h6 {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: black;
+  margin-bottom: 5px;
+}
+.pf-h5 {
+  font-family: 'Noto Sans TC', sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  color: black;
+  margin: 0;
+}
+// pid
+
+.backBtn{
+  display:inline;
+  width: 100px;
+}
+
+
+
+//ReactJS-slick
+
+.slick-space{
+  width: 444px;
+  height: 444px;
+  // border: 5px dashed orangered;
+  // border:1px solid #ae80c3;
+
+}
+
+// 讓大圖在最下面 
+.slick-list{
+z-index: -1 !important;
+}
+
+// list 再進去一層=track
+.slick-track img {
+  // border:1px solid #a3a3a3;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+// 小圖的ul slick-dots (空)
+.slick-dots  {
+  width: 100% !important;
+  margin: auto !important;
+  padding: 0 !important;
+  bottom: 0 !important;
+  position:static !important;
+  display: flex !important;
+//   flex-direction: row;
+  flex-wrap: nowrap !important;
+  justify-content: space-evenly !important;
+}
+.slick-dots li{
+  // width: 100% !important;
+  height: 100% !important;
+  // background-color: #b64b4b;
+  margin-right: 40px  !important;
+}
+.slick-dots li > img {
+  width: 80px !important;
+  height: 100% !important;
+  padding: 0 !important;
+  // margin: 0 5px !important;
+  object-fit: fill !important;
+  border: 0.5px solid #ae80c3;
+}
+
+.slick-next {
+  right: 10px !important;
+  z-index: 2 !important;
+}
+
+.slick-prev {
+    left: 0 !important;
+    z-index: 2 !important;
+}
+
+.slick-prev:before, .slick-next:before{
+  color: #3b1a54 !important; 
+  font-size: 30px !important;
+}
+
+
+
+
+/*
+main
+  div
+     Pid container
+       h2
+       slider initialized
+        btn-pre
+        list
+        btn-next
+        ul(dots thumb)
+
+       
+       
+       */

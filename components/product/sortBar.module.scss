@@ -1,0 +1,41 @@
+.box {
+  width: auto;
+  height: auto;
+  margin-bottom: 1.25rem;
+  // background-color: #ebb5b5;
+}
+.title {
+  // border-bottom: 2px solid #000000;
+  padding-bottom: .625rem;
+}
+.sortbar {
+  padding: 1.25rem 0 .625rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-top: 0.125rem solid #a3a3a3;
+  border-bottom: 0.125rem solid #a3a3a3;
+}
+.amount h6{
+  font-size: 1.25rem;
+}
+.num{
+  display: inline-block;
+  width:1.25rem;
+  text-align: center;
+}
+
+
+.sortSelect {
+  padding: .3125rem .625rem .3125rem .625rem;
+  margin-left: .625rem;
+  border-radius: 1.25rem;
+  border: .0625rem solid #000000;
+}
+@media (max-width: 640px) { 
+  .box .sortbar .amount h6{
+    font-size: 16px;
+
+  }
+ }

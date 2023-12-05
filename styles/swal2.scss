@@ -1,0 +1,19 @@
+@import 'globals.scss';
+
+.swal2-popup {
+  border-radius: 12px;
+}
+
+.swal2-modal {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.swal2-title {
+  font-size: 1.8rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+  color: $secondary-dark;
+}

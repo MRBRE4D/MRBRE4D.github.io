@@ -1,0 +1,271 @@
+@import 'globals.scss';
+// 外觀範例 https://codepen.io/nijgyyol-the-builder/pen/PoXybEM
+// 使用範例 ：三個class，第一個 mybtny or mybtnp，第二個 mybtny--s(大小)，第三個 mybtny--a(要接的樣式)
+// <button className="mybtny mybtny--s mybtny--a">Ａ</button> // a--有浮出陰影
+// <button className="mybtny mybtny--s mybtny--b">Ｂ</button> // b--單層顏色立體感的按鈕
+// <button className="mybtny mybtny--s mybtny--c">Ｃ</button> // c--從右邊填滿色
+// <button className="mybtny mybtny--s mybtny--e">Ｇ</button> // e--雙層顏色立體感的按鈕
+
+$color-main: $primary;
+$color-main-dark: $primary-deep;
+$color-sub: $secondary;
+$color-sub-dark: $secondary-deep;
+
+$h: 4px;
+$w: 6px;
+
+// 自定義------------------------------------------------
+.btn-l-gold {
+  border-radius: $w * 10;
+  padding: 1.32rem 2.75rem;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-size: 1.2rem;
+  font-weight: 500;
+  letter-spacing: 0.16rem;
+  color: white;
+  background-color: $gold;
+  border: 0px;
+  border-radius: 60px;
+  transition: 300ms ease;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.btn-l-gold:hover {
+  background-color: $gold-light;
+  box-shadow: 0 0 0 18px transparent;
+  animation: pulse 1s;
+}
+
+@keyframes pulse {
+  from {
+    box-shadow: 0 0 0 0 $gold;
+  }
+}
+
+// 共用樣式----------------------------------------------
+.mybtny {
+  display: inline-block;
+  // line-height: 1;
+  height: auto;
+  letter-spacing: 0.1em;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  background-color: $color-sub;
+  color: white;
+  border: 0px;
+  transition: 300ms ease;
+  cursor: pointer;
+
+  // 大小
+  &--s {
+    min-width: 3rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  &--m {
+    min-width: 5rem;
+    padding: 1rem 2.4rem;
+    font-size: 1.2rem;
+  }
+
+  &--l {
+    min-width: 10rem;
+    padding: 1.32rem 2.75rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 0.16rem;
+  }
+
+  // 樣式
+  &--a {
+    border-radius: $w * 10;
+    box-shadow: 0px 6px 20px -2px rgba($color-main-dark, 0.65);
+    &:hover {
+      box-shadow: 0px 14px 20px -10px rgba($color-main-dark, 0.55);
+      transform: translateY(-6px);
+    }
+  }
+
+  &--b {
+    border-radius: $w * 10;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 0 $color-main-dark;
+    &:hover {
+      transform: translateY(0);
+      box-shadow: 0 0 0 rgba($color-main-dark, 0);
+    }
+  }
+
+  &--c {
+    border-radius: $w * 10;
+    background: linear-gradient(
+      105deg,
+      $color-main 0%,
+      $color-main 50%,
+      $color-sub 50%
+    );
+    background-size: 220% 100%;
+
+    &:hover {
+      background-position: 100%;
+    }
+  }
+
+  &--d {
+    position: relative;
+    background: none;
+    color: $color-main;
+    text-align: left;
+    &:hover {
+      color: #fff;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $color-main;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform-origin: left top;
+      transform: scaleX(0);
+      transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    .btn__text {
+      padding-left: 1em;
+      transition: padding 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    &:hover .btn__text {
+      padding-left: 0;
+    }
+  }
+
+  &--e {
+    border-radius: $w * 10;
+    box-shadow: $h $w $color-main;
+    &:hover {
+      box-shadow: 0px 0px $color-main-dark;
+      transform: translateX($w);
+      transform: translateY($h);
+    }
+  }
+}
+.mybtnp {
+  display: inline-block;
+  line-height: 1;
+  letter-spacing: 0.1em;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  color: white;
+  background-color: $color-main;
+  border: 0px;
+  transition: 300ms ease;
+  cursor: pointer;
+
+  // 大小
+  &--s {
+    min-width: 3rem;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+  }
+
+  &--m {
+    min-width: 5rem;
+    padding: 1rem 2.4rem;
+    font-size: 1.2rem;
+  }
+
+  &--l {
+    min-width: 10rem;
+    padding: 1.125rem 2.75rem;
+    font-size: 1.2rem;
+  }
+
+  // 樣式
+  &--a {
+    border-radius: $w * 10;
+    box-shadow: 0px 6px 20px -2px rgba($color-sub-dark, 0.65);
+    &:hover {
+      box-shadow: 0px 14px 20px -10px rgba($color-sub-dark, 0.55);
+      transform: translateY(-6px);
+    }
+  }
+
+  &--b {
+    border-radius: $w * 10;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 0 $color-main-dark;
+    &:hover {
+      transform: translateY(0);
+      box-shadow: 0 0 0 rgba($color-main-dark, 0);
+    }
+  }
+
+  &--c {
+    border-radius: $w * 10;
+    background: linear-gradient(
+      105deg,
+      $color-main 0%,
+      $color-main 50%,
+      $color-sub 50%
+    );
+    background-size: 220% 100%;
+
+    &:hover {
+      background-position: 100%;
+    }
+  }
+
+  &--d {
+    position: relative;
+    background: none;
+    color: $color-sub;
+    text-align: left;
+    &:hover {
+      color: #fff;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background-color: $color-sub;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform-origin: left top;
+      transform: scaleX(0);
+      transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    .btn__text {
+      padding-left: 1em;
+      transition: padding 0.8s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+    }
+
+    &:hover .btn__text {
+      padding-left: 0;
+    }
+  }
+
+  &--e {
+    border-radius: $w * 10;
+    box-shadow: $h $w $color-sub;
+    &:hover {
+      box-shadow: 0px 0px $color-sub-dark;
+      transform: translateX($w);
+      transform: translateY($h);
+    }
+  }
+}

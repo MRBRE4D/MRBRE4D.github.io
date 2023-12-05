@@ -1,0 +1,11 @@
+.selectCountry,
+.selectTown {
+  border: solid 1px #dedcdc;
+  border-radius: 6px;
+  height: 38px;
+  font-size: 16px;
+}
+
+.selectCountry {
+  margin-right: 8px;
+}/*# sourceMappingURL=tw-zipcode.module.css.map */

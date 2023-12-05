@@ -1,0 +1,43 @@
+@import 'globals.scss';
+
+.card-pet-info{
+  border-radius: 16px;
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.25);
+  padding: 2.5rem 3.5rem;
+  margin-bottom: 2.5rem;
+}
+
+
+.pet-info-img{
+  width: 10rem;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 2rem;
+}
+
+.pet-info-img>img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.block-pet-info h3:first-child{
+  color: $primary;
+  border-bottom: 2px solid $primary;
+  padding-bottom: .8rem;
+  margin-bottom: .8rem;
+}
+
+.block-pet-info h5{
+  color: $gray-deep;
+}
+
+.pet-info-veri h5{
+  margin-right: .75rem;
+}
+
+.pet-info-gender{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin-bottom: .25rem;
+}

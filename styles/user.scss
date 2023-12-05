@@ -1,0 +1,446 @@
+@import './globals.scss';
+
+// ******** Login樣式 ********
+
+
+.bg-login{
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-login-r{
+  position: absolute;
+  right: 0px;
+  bottom: -20px;
+  display: inline-block;
+  width: 38%;
+}
+.bg-login-l{
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  display: inline-block;
+  width: 18%;
+}
+.container-login {
+  max-width: 400px;
+  margin: auto;
+  position: relative;
+}
+
+// .container-login-img {
+//   margin: 0 auto;
+//   width: 160px;
+// }
+
+.container-login-title {
+  position: absolute;
+  background-color: $secondary-pale;
+  top: 130px;
+  left: 130px;
+  padding: 0px 10px;
+}
+
+// .container-login-content,
+// .login-form {
+//   background-color: $secondary-pale;
+//   border-radius: 10px;
+// }
+
+// .container-login-content {
+//   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+//   padding: 30px;
+// }
+
+// .login-form {
+//   padding: 40px 30px 30px 30px;
+//   margin: auto;
+//   border: 3px solid $primary-light;
+//   color: $primary-dark;
+//   font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+// }
+
+
+// .input-group-style {
+//   border-radius: 5px;
+//   box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
+//   padding: 0;
+//   border: solid 1px $secondary-dark;
+//   width: 275px;
+//   display: flex;
+// }
+
+// .form-control-style,
+// .form-control-pwd,
+// .input-group-img-style {
+//   border-radius: 5px;
+//   padding: 6px;
+//   background-color: #fff;
+//   border: 0;
+// }
+
+// .form-control-style {
+//   width: 224px;
+//   outline: none;
+// }
+
+// .form-control-pwd {
+//   width: 174px;
+//   outline: none;
+// }
+
+// .input-group-img-style {
+//   width: 50px;
+//   text-align: center;
+// }
+
+// .forget-password {
+//   color: $gray-deep;
+//   font-size: 12px;
+// }
+
+// .login-btn-secondary {
+//   background-color: $secondary;
+//   border-radius: 3rem;
+//   border: 0;
+//   color: white;
+//   height: 35px;
+//   font-weight: bold;
+// }
+
+// .hr-sect {
+//   display: flex;
+//   flex-basis: 100%;
+//   align-items: center;
+//   color: rgba(0, 0, 0, 0.6);
+//   margin: 8px 0px;
+//   font-size: 12px;
+// }
+
+// .hr-sect:before,
+// .hr-sect:after {
+//   content: '';
+//   flex-grow: 1;
+//   background: rgba(0, 0, 0, 0.2);
+//   height: 1px;
+//   font-size: 0px;
+//   line-height: 0px;
+//   margin: 0px 10px;
+// }
+
+// .third-login {
+//   background-color: #e1e0e0;
+//   color: $secondary-dark;
+// }
+
+// .input-group-text {
+//   background-color: white;
+// }
+
+// ******** Login樣式結束 ********
+
+// ******** userIndex樣式 ********
+
+// .user-index-container {
+//   margin-top: 65px;
+//   // border: 5px solid rgb(186, 239, 89);
+// }
+
+// .user-index-header {
+//   padding: 80px 40px 30px 40px;
+//   // border: 3px solid purple;
+//   display: flex;
+//   justify-content: space-evenly;
+//   background: linear-gradient(180deg,
+//       #fff5e0 81.77%,
+//       rgba(255, 245, 224, 0) 100%);
+// }
+
+// .user-avatar-container {
+//   padding: 0;
+//   // width: 25rem;
+//   // height: 25rem;
+//   text-align: center;
+//   // border: 3px solid rgb(17, 122, 243);
+// }
+
+// .user-avatar {
+//   // border: 3px solid orange;
+//   border-radius: 50%;
+//   width: 350px;
+//   height: 350px;
+//   object-fit: cover;
+//   object-position: center;
+// }
+
+// .user-info-container {
+//   padding: 0;
+//   // border: 3px solid rgb(93, 188, 11);
+// }
+
+// .user-content {
+//   // border: 5px solid rgb(79, 54, 225);
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+// }
+
+// .user-detail {
+//   // border: 3px solid rgb(238, 59, 28);
+// }
+
+// .user-name {
+//   color: $primary;
+// }
+
+// .user-email {
+//   color: $gray-deep;
+// }
+
+// .user-text {
+//   color: $secondary-dark;
+// }
+
+// .text-span {
+//   font-size: 2.5rem;
+//   font-weight: bold;
+//   margin: 0 5px;
+//   color: $primary;
+// }
+
+// .border-left {
+//   border-left: 5px solid $secondary-dark;
+//   margin-right: 10px;
+// }
+
+// .user-medal {
+//   // border: 2px solid rgb(61, 211, 48);
+//   z-index: 2;
+// }
+
+// .user-medal>img {
+//   margin: 10px;
+//   width: 50px;
+//   height: 50px;
+// }
+
+// .pet-img-container {
+//   // border: 5px solid rgb(199, 170, 23);
+//   padding: 30px 0;
+//   position: relative;
+// }
+
+// .user-illustration-container {
+//   position: relative;
+//   z-index: 2;
+// }
+
+// .user-illustration {
+//   position: absolute;
+//   right: 50px;
+//   top: 20px;
+// }
+
+// .user-illustration-carpet {
+//   position: absolute;
+//   right: 370px;
+//   top: 510px;
+// }
+
+// .accordion {
+//   margin: 0 90px;
+//   width: 300px;
+//   border: none;
+// }
+
+// .accordion {
+//   font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+// }
+
+// .accordion-header>button {
+//   font-size: 1.5rem;
+//   font-weight: bold;
+//   color: $secondary-dark;
+// }
+
+// .accordion-body {
+//   font-size: 1.25rem;
+//   padding: 8px 30px;
+// }
+
+// .accordion-item {
+//   border: none;
+// }
+
+// .accordion-header {
+//   // border-top: 0;
+//   // border-right: 0;
+//   // border-left: 0;
+//   border-bottom: 1px solid $gray;
+// }
+
+// ******** userIndex樣式 ********
+
+// ******** register樣式 ********
+.register-main-container {
+  background-color: $secondary-pale;
+  // width: 800px; 
+  padding: 20px 0 30px 0 ;
+  
+}
+.register-container {
+width: 750px;
+margin: auto;
+
+  // margin-top: 65px;
+  // padding: 30px 60px;
+  // background-color: $secondary-pale;
+  // border: 5px solid purple;
+}
+
+.register-title {
+  color: $secondary-dark;
+  text-align: center;
+}
+
+.register-form-container {
+  margin: auto;
+  width: 100%;
+  // border: 3px solid red;
+}
+
+.user-hr-register-sect {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.6);
+  margin: 8px 0px;
+  font-size: 24px;
+  color: $primary;
+}
+
+.user-hr-register-sect:after {
+  content: '';
+  flex-grow: 1;
+  background: rgba(0, 0, 0, 0.2);
+  height: 1px;
+  font-size: 0px;
+  line-height: 0px;
+  margin: 0px 10px;
+}
+
+.account-main {
+  // border: 2px solid blue;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.account-main-text {
+  // border: 2px solid rgb(20, 218, 156);
+  padding-right: 10px;
+  width: 75%;
+  color: $secondary-dark;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.user-form-error {
+  color: red;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-size: 16px;
+  margin-left: 100px;
+  width: 250px;
+  
+}
+
+.accont-main-avatar {
+  // border: 1px solid rgb(196, 196, 196);
+  width: 30%;
+  text-align: center;
+}
+
+.account-user-avatar {
+  border: 1px solid rgb(196, 196, 196);
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  // object-fit: cover;
+  // object-position: center;
+}
+
+.account-sub {
+  // border: 2px solid darkgreen;
+  color: $secondary-dark;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.addr-select {
+  display: flex;
+  justify-content: space-between;
+}
+
+.register-btn {
+  color: white;
+  background-color: $secondary;
+  width: 200px;
+  height: 40px;
+  border: 0;
+  border-radius: 15rem;
+  font-weight: bold;
+}
+
+.btn-container {
+  text-align: center;
+}
+
+.font-align {
+  text-align: right;
+}
+
+.font-align-center {
+  text-align: center;
+}
+
+// ******** forget-password樣式 ********
+
+.forget-pwd-container{
+  margin: 150px auto;
+  // border:3px solid red;
+  width: 600px;
+  padding: 0 50px;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  color:$secondary-dark;
+}
+
+.forget-pwd-label {
+  font-size: 20px; 
+  font-weight: bold;
+}
+
+.forget-pwd-input,.forget-pwd-input-email {
+  border: 1px solid $gray;
+  padding: 5px;
+  margin-left: 10px;
+}
+
+.forget-pwd-input {
+  border-radius: 5px;
+}
+
+.forget-pwd-input-email {
+  border-radius: 5px 0 0 5px;
+}
+
+.otp-btn {
+  background-color: light-grey;
+  border-radius: 0 5px 5px 0;
+  padding: 5px;
+  border: 1px solid $gray;
+}

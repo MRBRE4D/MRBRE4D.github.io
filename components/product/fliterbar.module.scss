@@ -1,0 +1,102 @@
+// @import '/styles/globals.scss';
+
+.Search {
+  width: 228px;
+  height: auto;
+  padding-bottom: 28px;
+  // margin-right: 68px;
+  border-bottom: 3px solid #ae80c3;
+}
+.searchBar {
+  margin-bottom: 20px;
+}
+.searchInput {
+  width: 100%;
+  height: 32px;
+  padding-left: 28px;
+  border-radius: 0.5em;
+  border: solid 2px #a3a3a3;
+  // box-shadow: 1px 1px 4px #a3a3a3;
+
+  background-image: url(/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: left 8px center;
+  outline: 0;
+}
+
+.searchText {
+  color: #ae80c3;
+  border-bottom: solid 2px #ae80c3;
+}
+
+.petType {
+  width: 190px;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.petIcon {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.checkSearch {
+  margin-bottom: 20px;
+}
+.checkGroup {
+  display: flex;
+  width: 200px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.checkGroup div {
+  margin-right: 20px;
+}
+.petBody > h5 {
+  padding: 0 5px;
+}
+.category {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 200;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.category1 > select {
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  margin-bottom: 10px;
+  width: 105px;
+  border: solid 2px #a3a3a3;
+  border-radius: 0.5em;
+}
+
+.category2 > select {
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  margin-bottom: 10px;
+  width: 105px;
+  border: solid 2px #a3a3a3;
+  border-radius: 0.5em;
+}
+
+.priceInput {
+  width: 100%;
+  // border: 1px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priceBtn {
+  padding: 8px;
+  border-radius: 12px;
+  background-color: #ffc876;
+}
+.priceInput input[type='text'] {
+  margin: 3px;
+  border: solid 2px #a3a3a3;
+  border-radius: 10px;
+  width: 70px;
+}

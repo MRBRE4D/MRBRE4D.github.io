@@ -1,0 +1,10 @@
+<svg width="540" height="540" viewBox="0 0 540 600" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <filter id="glow" width="200%" height="200%" x="-50%" y="-50%" filterUnits="objectBoundingBox">
+      <feGaussianBlur in="SourceAlpha" result="blurOut" stdDeviation="10" />
+      <feColorMatrix in="blurOut" result="colorOut" type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0.7 0" />
+      <feBlend in="SourceGraphic" in2="colorOut" mode="normal" />
+    </filter>
+  </defs>
+  <path filter="url(#glow)" d="M259.952 517.765C401.855 517.765 516.89 402.771 516.89 260.919C516.89 119.067 401.855 4.073 259.952 4.073C118.049 4.073 3.01392 119.067 3.01392 260.919C3.01392 402.771 118.049 517.765 259.952 517.765Z" stroke="#fff2c3" stroke-width="5" stroke-miterlimit="10"/>
+</svg>

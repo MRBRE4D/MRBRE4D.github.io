@@ -1,0 +1,63 @@
+.webContentOpen{
+    position: relative;
+    word-wrap: break-word;
+    background-color: white;
+}
+
+.webContentStart{
+    width: 253px;
+    height: 300px;
+    border: 1px solid #ffc876;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0 ;
+    position: relative;
+    word-wrap: break-word;
+    background-color: white;
+}
+
+.webTitle{
+    text-align: center;
+}
+
+.webName{
+    margin: 10px;
+}
+
+.webTextRight{
+    text-align: right;
+    margin: 5px;
+  }
+.webTextLeft{
+    text-align: left;
+    margin: 10px;
+  }
+
+.webInput{
+    position: absolute;
+    bottom: 0;
+}
+
+.webMessage{
+    height: 200px;
+    overflow-y : scroll;
+}
+
+.webSendBtn{
+    width: 116px;
+    text-align: center;
+  padding: 8px 0;
+  font-weight: bolder;
+  background-color: #ffc876;
+  border-radius: 2rem;
+  margin-top: 10px;
+  border: 0;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  letter-spacing: 3px;
+  color: #fffaec;
+}
+
+.webBtn{
+    background: white;
+    border:1px solid black;
+    border-left: none;
+}

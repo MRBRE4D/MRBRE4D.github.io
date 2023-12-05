@@ -1,0 +1,328 @@
+@import './globals.scss';
+$forum-width: 37.5rem;
+
+.container-forum>a {
+  text-decoration: none;
+}
+
+.forum-total-container {
+  margin: auto;
+  margin-top: 6.25rem;
+  display: flex;
+  padding-bottom: 1.25rem;
+  width: 1000px;
+}
+
+.push-ma {
+  width: 750px;
+  display: flex;
+  margin: auto;
+  justify-content: space-evenly;
+  border-bottom: 0.0625rem solid;
+  padding: 0.625rem 0;
+}
+
+.push {
+  background-color: $secondary;
+  border-radius: $border-radius-sm;
+  padding: 0.3125rem 3.125rem 0.3125rem 3.125rem;
+  list-style: none;
+}
+
+.push-a {
+  text-decoration: none;
+  color: black;
+}
+
+.push-post {
+  background-color: #c6add2;
+  padding: 0px 25px 0px 25px;
+  border-radius: $border-radius-sm;
+
+  height: 50px;
+}
+
+.push-post-a {
+  display: flex;
+  flex-direction: column-reverse;
+  text-decoration: none;
+}
+
+// 卡片
+.container-forum {
+  width: 60rem;
+  display: flex;
+  justify-content: space-between;
+  // margin: 0 16.5rem;
+  margin-top: 2rem;
+  padding-bottom: 1.25rem;
+}
+
+.card-forum {
+  width: 17.5rem;
+  overflow: hidden;
+  border-radius: 1.5rem 1.5rem 0rem 0rem;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 18px 0px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.5s ease;
+  // margin-right: 6.25rem;
+}
+
+.card-forum:hover {
+  box-shadow: 0px 50px 100px -20px rgba(0, 0, 0, 0.2),
+    0px 30px 60px -30px rgba(0, 0, 0, 0.2);
+}
+
+.card-forum-img-container {
+  width: 100%;
+  height: 16rem;
+}
+
+.card-forum-img-container>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-forum-user {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.card-forum-user-img {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.card-forum-user-img>img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-forum-user-name {
+  display: flex;
+  align-items: end;
+  padding-left: 0.625rem;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: $secondary-dark;
+}
+
+.card-forum-data {
+  display: flex;
+  flex-direction: column;
+  padding: 1.2rem 1.6rem;
+  padding-bottom: 2rem;
+}
+
+.card-forum-date {
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.08rem;
+  color: $gray;
+}
+
+.card-forum-title {
+  font-size: 1.4rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  color: $primary;
+}
+
+//search---------------------------------
+.container-forum-search {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-top: 9.6rem;
+}
+
+.block-search {
+  display: flex;
+}
+
+.search-forum {
+  width: 30rem;
+  height: 3rem;
+  padding-left: 28px;
+  border-radius: 0.5em;
+  border: solid 1px $gray;
+  background-image: url(/Vector.svg);
+  background-repeat: no-repeat;
+  background-position: left 8px center;
+  outline: 0;
+  font-size: 1rem;
+}
+
+.search-forum:focus {
+  border: solid 1.8px $primary;
+}
+
+.container-forum-search-cat {
+  position: absolute;
+  left: 15rem;
+  bottom: 0rem;
+  width: 8.6rem;
+}
+
+.container-forum-search-dog {
+  position: absolute;
+  right: 16.5rem;
+  bottom: 0rem;
+  width: 6rem;
+}
+
+// 發文列表--------------------------------------------
+.container-forum-table {
+  width: 60rem;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+.forum-table {
+  width: 100%;
+}
+
+.forum-table-th {
+  background: $primary;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-size: 1.25rem;
+  font-weight: normal;
+  color: white;
+}
+
+.forum-table-th>tr>th {
+  padding: 0.75rem;
+}
+
+.forum-table-th>tr>th:first-child {
+  padding: 0.89rem;
+}
+
+.forum-table-td {
+  font-size: 1.125rem;
+  line-height: 4.2rem;
+  border-bottom: 1px solid $gray;
+  cursor: pointer;
+}
+
+.forum-table-cell-title {
+  text-decoration: none;
+  color: $secondary-dark;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-weight: 500;
+  padding-left: 1rem;
+
+}
+
+.forum-table-td:hover {
+  .forum-table-cell-title {
+    border-left: 4px solid $primary;
+    // padding-left: 1.rem;
+  }
+}
+
+.forum-table-th-s,
+.forum-table-cell-s {
+  width: calc((100% - 25rem) / 3);
+  text-align: center;
+}
+
+.forum-table-cell-s {
+  font-size: 1rem;
+  color: $gray-deep;
+}
+
+.forum-table-th-l,
+.forum-table-cell-l {
+  width: 25rem;
+  text-align: left;
+}
+
+.list-two {
+  background: #f8f6f6;
+}
+
+.list-color {
+  background: #f5eac9;
+}
+
+.h {
+  height: 6.25rem;
+}
+
+// .shadow {
+//   box-shadow: inset 0px 0px 50px 0px #ababab, 4px 2px 8px 2px #babaaf;
+//   -webkit-box-shadow: inset 0px 0px 50px 0px #ababab, 4px 2px 8px 2px #babaaf;
+//   -moz-box-shadow: inset 0px 0px 50px 0px #ababab, 4px 2px 8px 2px #babaaf;
+//   -o-box-shadow: inset 0px 0px 50px 0px #ababab, 4px 2px 8px 2px #babaaf;
+// }
+//分頁
+.page-container {
+  margin-top: 100px;
+  text-align: center;
+}
+
+ul.pagination {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+ul.pagination li {
+  display: inline;
+}
+
+ul.pagination li a {
+  color: $secondary-dark;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+ul.pagination li a.active {
+  background-color: #c6add2;
+  color: white;
+  border-radius: 10px;
+}
+
+ul.pagination li a:hover:not(.active) {
+  background-color: #ffe382;
+  border-radius: 10px;
+}
+
+.page-button {
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  background: white;
+  border-radius: 5px;
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.page-button.active {
+  color: $secondary-dark;
+  background-color: $secondary;
+}
+
+.page-button:hover {
+  color: white;
+  background-color: $primary-light;
+}
+
+//測試

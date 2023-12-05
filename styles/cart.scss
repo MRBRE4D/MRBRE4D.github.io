@@ -1,0 +1,418 @@
+@import 'globals.scss';
+
+
+
+/* 狗 */
+.cart-dog img {
+  width: 160px;
+  position: absolute;
+  right: 300px;
+  top: 155px;
+}
+/* 男人牽狗 */
+.man-dog {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cart-empty {
+  width: 100%;
+  margin: auto;
+  vertical-align: center !important;
+  text-align: center !important;
+}
+
+/*   step   */
+.step-bar {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.cart-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart-line {
+  margin-left: 10px;
+  margin-right: 10px;
+  width: 200px;
+  height: 1px;
+  display: block;
+  background-color: $gray;
+}
+.step-title {
+  margin-top: 8px;
+}
+
+/* step end */
+
+/*  table  */
+
+// 下面的紫線
+.cart-table {
+  border-bottom: 2px solid $primary !important;
+}
+// 上面的紫線
+.cart-table thead {
+  border-bottom: 2px solid $primary;
+}
+// 表頭垂直置中
+.cart-table thead tr {
+  vertical-align: middle !important;
+}
+.cart-table tbody tr td {
+  border-bottom: 1px solid #bcbcbc !important;
+  padding: 1.75rem 1.25rem !important;
+  vertical-align: middle !important;
+}
+.cart-table tbody img {
+  width: 3rem;
+}
+.cart-table th,
+.cart-table tr,
+.cart-table tbody tr td {
+  text-align: center !important;
+  line-height: auto !important;
+}
+
+// .cart-table th,
+// .cart-table tr,
+// .cart-table td {
+//   border: 1px solid #a3a3a3 !important;
+// }
+
+
+//! payment
+// .error{
+//   min: height 100px;
+// }
+
+//! confirm
+
+.order-container {
+  padding: 12px 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  height: 21.25rem;
+  // justify-content: center;
+  align-items: center;
+  border: 2px solid $primary;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.order-title {
+  font-size: 32px;
+  width: 100%;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  // align-items: center;
+}
+.order-info{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.order-info > div {
+
+  padding: 5px;
+  font-size: 20px;
+  width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+img.pimg {
+  width: 100px;
+  height: auto;
+}
+
+.trash {
+  font-size: 12px;
+  // width: 20px;
+  // background-color: aqua;
+}
+/*#endregion product list*/
+
+/*   優惠券按鈕   */
+/*#region TOGGLE*/
+//! todo
+
+// * {
+// 	box-sizing: border-box;
+// 	&:before, &:after {
+// 		content: '';
+// position: absolute;
+// 	}
+// }
+
+#doggo {
+  height: 40px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 40px;
+}
+
+.toggle-wrapper {
+  // flex: 1 1 calc(100% / 3);
+  // min-height: 50vh;
+  display: flex;
+  // align-items: center;
+  // justify-content: center;
+  overflow: hidden;
+  position: relative;
+  // @media (max-width: 960px) {
+  // 	flex: 1 1 calc(100% / 2);
+  // }
+  // @media (max-width: 700px) {
+  // 	flex: 1 1 100%;
+  // }
+
+  .toggle {
+    position: relative;
+    // display: inline-block;
+  }
+
+  label.toggle-item {
+    margin: 0;
+    width: 7em;
+    background: #595959;
+    height: 3em;
+    display: inline-block;
+    border-radius: 50px;
+    // margin: 40px;
+    position: relative;
+    transition: all 0.3s ease;
+    transform-origin: 20% center;
+    cursor: pointer;
+    &:before {
+      display: block;
+      transition: all 0.2s ease;
+      width: 2.3em;
+      height: 2.3em;
+      top: 0.25em;
+      left: 0.25em;
+      border-radius: 2em;
+      border: 2px solid #88cf8f;
+      transition: 0.3s ease;
+    }
+  }
+}
+
+.dog-rollover {
+  label {
+    &:before {
+      content: none;
+    }
+    .dog {
+      display: inline-block;
+      position: absolute;
+      width: 2.5em;
+      height: 2.5em;
+      top: 0.25em;
+      left: 0.2em;
+      transition: 0.6s ease;
+    }
+    .eyes {
+      position: absolute;
+      width: 5px;
+      height: 8px;
+      background: #222;
+      border-radius: 50%;
+      transform: translate(8px, 14px);
+      box-shadow: 16px 0 0 #222, 22px -4px 0 12px #e4ac04;
+    }
+    .ear {
+      width: 15px;
+      height: 14px;
+      position: absolute;
+      left: -1px;
+      bottom: 92%;
+      background: #f9bb00;
+      margin-bottom: -5px;
+      border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+      box-shadow: inset 4px 0 0 0px #ffffff, inset -4px 0 0 0px #ffffff;
+      transform: rotate(-40deg);
+      &.right {
+        transform: rotate(60deg) scaleX(-1);
+        left: auto;
+        transform-origin: center bottom;
+        transition: 0.4s ease-in-out;
+        right: 2px;
+      }
+    }
+    .face {
+      overflow: hidden;
+      border-radius: 50%;
+      width: 2.5em;
+      height: 2.5em;
+      position: absolute;
+      background: #fff;
+      z-index: 8;
+    }
+    .mouth {
+      position: absolute;
+      background: #222;
+      width: 12px;
+      height: 7px;
+      left: 50%;
+      margin-left: -7px;
+      bottom: 8px;
+      border-radius: 2px 2px 20px 20px;
+      // bottom: 8px;
+      transform: scale(0);
+      transition: 0.1s ease;
+      &:before {
+        width: 8px;
+        height: 8px;
+        background: #ec788d;
+        border-radius: 0 0 50% 50%;
+        transform: translate(3px, 5px);
+        content: '';
+        position: absolute;
+      }
+    }
+    &:before {
+      border-color: white;
+      background: white;
+    }
+  }
+}
+
+#doggo:checked {
+  ~ .cup {
+    animation: 0.2s linear cup 1s forwards;
+  }
+  + label {
+    background: #80c7a7;
+    .dog {
+      left: 68px;
+      transform: rotate(360deg);
+    }
+    .mouth {
+      transform: scale(1);
+      transition-delay: 0.7s;
+    }
+    .ear.right {
+      transform: scaleX(-1) rotate(-35deg);
+      transition-delay: 0.6s;
+    }
+  }
+}
+/*#endregion TOGGLE*/
+
+/*    總金額    */
+/*#region total */
+.total-container {
+  padding: 12px 12px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  border: 2px solid $primary;
+  border-radius: 8px;
+  background-color: #fff;
+}
+.total-title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.total-content {
+  width: 100%;
+  padding: 20px;
+
+  border-top: 2px solid $primary;
+  border-bottom: 2px solid $primary;
+}
+.total-content ul {
+  padding: 0;
+  margin: 0;
+}
+.total-content ul li {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.total-price {
+  margin-top: 0.625rem;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.cart-btn {
+  width: 100%;
+  padding: 8px;
+  margin-top: 24px;
+  border: 1px solid black;
+}
+/*#endregion total*/
+
+.block-payment-card {
+  background-color: $secondary-pale;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.25);
+}
+
+.block-payment-card table {
+  border-collapse: collapse;
+  // background-color: red;
+}
+
+// .block-payment-card table, .block-payment-card tbody,.block-payment-card tr,.block-payment-card th,.block-payment-card td{
+//   border: 0 !important;
+// }
+
+.block-payment-card thead {
+  border-bottom: 1px solid $gray-deep;
+  line-height: 3rem;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+  color: $secondary-dark;
+}
+
+.block-payment-card tbody > tr > td {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $gray-deep;
+  text-align: center;
+  width: calc((5rem / 2));
+}
+
+.block-payment-card tbody > tr:first {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid $gray-deep;
+  text-align: justify;
+  width: 5rem;
+}
+
+.block-payment-card tfoot {
+  font-size: 1.2rem;
+  text-align: right;
+  border-top: 1px solid $gray-deep;
+}
+
+.block-payment-card tfoot > tr > td {
+  padding-top: 1.5rem;
+  font-family: 'Zen Maru Gothic', 'Noto Sans TC Regular';
+  font-weight: 500;
+  color: gray;
+}
+
+.payment-total-price {
+  color: $primary-deep;
+  font-size: 1.8rem;
+}

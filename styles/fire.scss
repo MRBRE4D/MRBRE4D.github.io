@@ -1,0 +1,102 @@
+@import './globals.scss';
+
+.fire-title{
+  color: white;
+  position: absolute;
+  left: 120px;
+  top: 260px;
+  line-height: 4rem;
+  z-index: 1;
+  text-shadow: 0px 0px 12px $gray-deep;
+}
+
+.fire-die-img{
+  width: 100vw;
+  height: 100%;
+}
+
+.fire-die-img>img{
+  width: 100%;
+  height: 100%;
+}
+
+.fire-step-top{
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+
+}
+
+.fire-step-top>img{
+  position: absolute;
+  width: 100%;
+  top: -24px;
+  z-index: -1;
+}
+
+.step-box{
+  position: relative;
+  margin-bottom: 4.6rem;
+}
+
+.step-box>img{
+  margin-right: 1.5rem;
+}
+
+.step-text h2{
+  color: $primary-deep;
+}
+
+.step-text h5{
+  color: $gray-deep;
+}
+
+.step-box-1{
+  position: relative;
+  left: 220px;
+}
+
+.step-box-2{
+  position: relative;
+  left: -10px;
+}
+
+.step-box-3{
+  position: relative;
+  left: 360px;
+}
+
+.step-box-4{
+  position: relative;
+  top: 16px;
+}
+
+.step-box-5{
+  position: relative;
+  top: 72px;
+  left: 88px;
+}
+
+.step-text-bottom{
+  width: 25rem;
+}
+
+.fire-step-bottom{
+margin-top: 12.5rem;
+margin-bottom: 2.5rem;
+}
+
+.step-box-6{
+  margin-right: 3.75rem;
+}
+
+.step-box-bottom-line{
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid $gray;
+}
+
+.fire-flower-l{
+  transform: scaleX(-1);
+}

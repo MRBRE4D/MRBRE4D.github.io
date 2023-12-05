@@ -1,0 +1,77 @@
+// 選單項目(icon)改為用滑鼠hover展開(原先是要click)
+.dropdown:hover .dropdown-menu {
+  display: block;
+  right: 0;
+  left: auto;
+}
+// 購物車數字
+.navCartNum{
+  position: absolute;
+  padding: 4px 5px ;
+  
+  left: 50%;
+  bottom: 50%;
+  font-size: 0.8rem;
+  font-weight: bolder;
+  line-height: 0.8rem;
+  color: #ffffff;
+  background-color: rgb(174, 128, 195,0.8);
+  border-radius: 50%;
+
+}
+// 選單項目active客製(第一層)
+.custom-active {
+  font-weight: 500;
+}
+
+.navbarLogin{
+  position: relative;
+  width: 200px;
+  height: auto;
+  margin-right: 2.5rem;
+  display: flex;
+justify-content: center;
+align-items: center;
+}
+.navbarLoginBtnBlock{
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+
+}
+
+
+.navbarLoginImg{
+position: absolute;
+width: 80%;
+}
+
+// 下拉選單展開動畫
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+// mobile disable animation
+@media only screen and (max-width: 992px) {
+  .slideIn {
+    animation: none !important;
+  }
+}

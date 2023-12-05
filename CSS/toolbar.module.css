@@ -1,0 +1,56 @@
+.dropdown:hover .dropdown-menu {
+  display: block;
+  right: 0;
+  left: auto;
+}
+
+.custom-active {
+  font-weight: 500;
+}
+
+.navbarLogin {
+  position: relative;
+  width: 200px;
+  height: auto;
+  margin-right: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarLoginBtnBlock {
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbarLoginImg {
+  position: absolute;
+  width: 80%;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+}
+.slideIn {
+  animation-name: slideIn;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+}
+
+@media only screen and (max-width: 992px) {
+  .slideIn {
+    animation: none !important;
+  }
+}/*# sourceMappingURL=toolbar.module.css.map */
