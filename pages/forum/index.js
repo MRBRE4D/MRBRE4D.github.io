@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useState, useEffect, useRef } from 'react'
-import App from '@/components/page/App'
+import App from '@/components/page/app.js'
 
 export default function Index() {
   const [forum, setForum] = useState([])
