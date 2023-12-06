@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   //output: 'export', // don't use with `next start` or api route
-  //distDir: 'dist',
+  distDir: 'build',
   reactStrictMode: false,
   images: {
     unoptimized: true,
