@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 
 export default function Payment() {
   const { cart, dispatch } = useContext(CartContext)
-  // console.log(cart)
+
   const router = useRouter()
   // 初始用物件，填入資料與呈現錯誤訊息均需要
   const initData = {

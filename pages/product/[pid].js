@@ -32,8 +32,7 @@ export default function Detail() {
   const addToCartHandler = (product) => {
     dispatch(addToCart(product))
   }
-  // console.log('counterCount-------------')
-  // console.log(counterCount)
+
   const data = allProducts.find((item) => item.id == Number(pid))
   const typeData = getData.filter((v) => {
     return v.type2 == data.type2
@@ -41,8 +40,7 @@ export default function Detail() {
   const normalData = getData.filter((v) => {
     return v.type2 !== '寵物禮儀'
   })
-  console.log('normalData')
-  console.log(normalData)
+
   //   const [data, setData] = useState([])
   // // array.find(pid) 去找個別資料
   //   const router = useRouter() // 要用useRouter才可以抓到pid

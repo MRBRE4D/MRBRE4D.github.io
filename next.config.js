@@ -7,6 +7,9 @@ const nextConfig = {
     unoptimized: true,
     domains: ['via.placeholder.com', 'localhost'],
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+},
   // avoid cors with proxy
   // async rewrites() {
   //   return [

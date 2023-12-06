@@ -37,8 +37,7 @@ const initApp = (callback) => {
 
         // The signed-in user info.
         const user = result.user
-        console.log(token)
-        console.log(user)
+      
       }
     })
     .catch((error) => {
@@ -48,7 +47,7 @@ const initApp = (callback) => {
   // Listening for auth state changes.
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      console.log('user', user)
+
       // callback the user data
       callback(user.providerData[0])
     }
@@ -78,7 +77,6 @@ const loginGoogle = async (callback) => {
   signInWithPopup(auth, provider)
     .then(async (result) => {
       const user = result.user
-      console.log(user)
 
       // user後端寫入資料庫等等的操作
       callback(user.providerData[0])

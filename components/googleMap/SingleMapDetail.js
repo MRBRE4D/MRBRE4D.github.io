@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react'
 
 // 申請的google api key
-import { apiKey } from '../../pages/stray/googleApi'
+import apiKey from '@/components/googleMap/googleApi'
 
 const mapStyles = {
   stylers: 

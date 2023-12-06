@@ -11,14 +11,12 @@ export default function ProductIndex() {
   const [data, setData] = useState([])
   const router = useRouter()
   // const { pid } = router.query
-  // console.log("pid")
-  // console.log(pid)
+
   const searchQuery = router.query.search
   const type1Query = router.query.type1
   const type2Query = router.query.type2
 
-  console.log('data--------------------')
-  console.log(data)
+
 
   useEffect(() => {
     let filteredData = getData

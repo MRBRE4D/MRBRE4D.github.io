@@ -9,8 +9,6 @@ export default function FliterBar({ data, setData }) {
   // 下拉次要分類狀態
   const [dropDownOptionState, setDropDownOptionState] = useState([])
 
-  console.log('dropDownOptionState')
-  console.log(dropDownOptionState)
   //* 單選分類1的狀態
   const [selectedPetType, setSelectedPetType] = useState('')
 
@@ -74,8 +72,8 @@ export default function FliterBar({ data, setData }) {
       if (selectedTypes.length > 0) {
         queryParams.type2 = selectedTypes.join(',')
       }
-      console.log('queryParams')
-      console.log(queryParams)
+      // console.log('queryParams')
+      // console.log(queryParams)
       if (queryParams.search || queryParams.type1 || queryParams.type2) {
         router.push({
           pathname: '/product/list',

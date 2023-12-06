@@ -17,7 +17,7 @@ export default function Index() {
   useEffect(() => {
     getForum()
   }, [])
-  // console.log(search);
+
   // const getSearch = async () => {
   //   const res = await fetch('http://localhost:3005/forum/search')
   //   const datah = await res.json()
@@ -29,7 +29,7 @@ export default function Index() {
   const searchbtn = () => {
     inputSearchref.current.value
   }
-  console.log(forum)
+
   return (
     <>
       <div className="container d-flex flex-column align-items-center">

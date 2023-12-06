@@ -2,7 +2,6 @@ import Link from 'next/link'
 import React from 'react'
 
 const CryptoList = ({ coinData }) => {
-  console.log(coinData)
   return (
     <table className="forum-table">
       <thead className="forum-table-th">

@@ -7,7 +7,7 @@ export default function Header() {
 
   // console.log(auth)
   const { id } = auth
-  console.log(auth)
+  // console.log(auth)
 
   // 儲存寵物各欄位填入資料用state
   const [data, setData] = useState([])

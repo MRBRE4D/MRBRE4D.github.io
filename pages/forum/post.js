@@ -29,9 +29,9 @@ export default function Post() {
 
   const { auth, setAuth } = useContext(AuthContext)
 
-  // console.log(auth)
+
   const { id } = auth
-  console.log(auth)
+
 
   const MySwal = withReactContent(Swal)
 

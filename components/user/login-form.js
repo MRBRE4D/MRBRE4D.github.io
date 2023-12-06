@@ -49,10 +49,10 @@ export default function LoginForm() {
 
   // 處理google登入後，要向伺服器進行登入動作
   const callbackGoogleLoginRedirect = async (providerData) => {
-    console.log(providerData)
+
 
     if (providerData.uid) {
-      console.log(`-----`)
+
       router.push('/')
       // setTimeout(() => {
       //   setIsLoading(false)
@@ -66,11 +66,10 @@ export default function LoginForm() {
       providerData
     )
 
-    console.log(res.data)
     if (res.data.success && res.data.code == 200) {
       localStorage.setItem('authJWT', JSON.stringify(res.data.data))
       setAuth(res.data.data)
-      console.log(auth)
+
       router.push('/')
     }
   }
@@ -146,7 +145,7 @@ export default function LoginForm() {
     }
 
     // 如果完全驗証後無錯誤，才會執行到這裡的程式碼
-    console.log(formVals)
+
 
     const MySwal = withReactContent(Swal)
 
@@ -159,12 +158,9 @@ export default function LoginForm() {
     })
       .then((res) => res.json())
       .then((obj) => {
-        console.log(obj)
         if (obj.success && obj.data?.email) {
-          console.log(obj.data.email)
           localStorage.setItem('authJWT', JSON.stringify(obj.data))
           setAuth(obj.data)
-          // console.log(auth)
         } else {
           Swal.fire({
             icon: 'error',

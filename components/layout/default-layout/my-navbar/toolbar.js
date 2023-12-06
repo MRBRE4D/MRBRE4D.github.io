@@ -6,8 +6,6 @@ import { CartContext } from '@/hooks/use-cart'
 
 export default function Toolbar({ currentRoute }) {
   const { cart } = useContext(CartContext)
-  console.log('cart----------------------')
-  console.log(cart)
   return (
     <ul className="navbar-nav pe-2">
       <li className="nav-item ">

@@ -45,22 +45,13 @@ export default function Form() {
   // 儲存表單各欄位填入資料用state
   const [data, setData] = useState(initData)
 
-  console.log(data.country)
-  console.log(data.township)
-  console.log(data.postcode)
   // 儲存表單各欄位發生錯誤的訊息用state
   // 這裡調整agree需要是空白字串，它是用來記錄錯誤訊息用的
   const [errors, setErrors] = useState({ ...initData, agree: '' })
 
   // 所有欄位共用的事件處理函式
   const handleFieldChange = (e) => {
-    console.log(e.target.name)
-    console.log(e.target)
-    console.log(e.target.country)
-    // console.log(e.target[e.target.selectedIndex].text)
 
-    console.log(e.target.value)
-    console.log(e.target.checked)
 
     if (e.target.name === 'agree')
       return setData({ ...data, agree: e.target.checked })
@@ -88,7 +79,7 @@ export default function Form() {
     }
 
     if (validator.isEmpty(data.address, { ignore_whitespace: true })) {
-      console.log(data.county)
+
       newErrors.address ||= '地址為必填欄位'
     }
 
@@ -168,7 +159,7 @@ export default function Form() {
 
   // 每欄位失焦時會進行該欄位的檢查，如果有錯誤會呈現，或是正確後消去錯誤訊息
   const handleBlur = (e) => {
-    console.log(data.county)
+
     const newErrors = validateFields(data, errors, e.target.name)
     setErrors(newErrors)
   }
@@ -194,7 +185,7 @@ export default function Form() {
     }
 
     // 如果完全驗証後無錯誤，才會執行到這裡的程式碼
-    console.log(data)
+
     fetch('http://localhost:3005/stray/form', {
       method: 'POST',
       body: JSON.stringify(data),

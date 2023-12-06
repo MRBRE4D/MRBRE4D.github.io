@@ -10,8 +10,7 @@ const App = () => {
 
   const fetchData = async () => {
     const res = await axios.get('http://localhost:3005/forum')
-    // console.log(res.data)
-    // console.log(res.data.result1)
+
     setCoinData(res.data.result1)
   }
   useEffect(() => {

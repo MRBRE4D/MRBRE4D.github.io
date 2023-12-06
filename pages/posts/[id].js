@@ -40,7 +40,7 @@ export async function getStaticProps({ params }) {
   ]
 
   // ex.{id:'2'}
-  console.log(params)
+
   // get post by id
   const post = posts.find((v) => v.id === params.id)
 
@@ -79,7 +79,7 @@ export async function getStaticPaths() {
   })
 
   // [ { params: { id: '1' } }, { params: { id: '2' } } ]
-  console.log(paths)
+
 
   return {
     paths,

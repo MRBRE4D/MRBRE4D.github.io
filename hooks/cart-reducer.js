@@ -2,21 +2,6 @@ import { useEffect } from 'react'
 
 const initialState = []
 
-/*
-    // 判斷能不能用 localStorage
-    if (typeof window !== 'undefined') {
-      console.log('You are on the browser')
-      // 👉️ can use localStorage here
-
-      localStorage.setItem('name', 'Tom')
-
-      console.log(localStorage.getItem('name')) // 👉️ "Tom"
-    } else {
-      console.log('You are on the server')
-      // 👉️ can't use localStorage
-    }
-*/
-
 // useReducer 中的reducer 真正做動作的地方
 export const cartReducer = (state, action) => {
   // 設定不同動作

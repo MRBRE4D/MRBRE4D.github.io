@@ -13,7 +13,7 @@ export default function PidSlick({ Pimgs }) {
       alt: `Image ${i + 1}`,
     }
   })
-  console.log(images)
+  // console.log(images)
   // const images = [
   //   {
   //     id: 1,

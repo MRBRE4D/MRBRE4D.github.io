@@ -14,8 +14,6 @@ export default function PriceCounter({
 }) {
   const router = useRouter()
   const pathname = router.pathname
-  console.log('pathname')
-  console.log(pathname)
 
   const [count, setCount] = useState(0)
   // 增加

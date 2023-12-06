@@ -26,8 +26,7 @@ export default function Health() {
     func()
   }, [])
 
-  console.log('----------------')
-  console.log(data)
+  
   // 處理data資料裡的日期
   const labels_data = data.map((dataArray) => {
     return dataArray.map((item) => {
@@ -63,8 +62,7 @@ export default function Health() {
     return dataArray / 10
   })
 
-  console.log(data_countingShow[0])
-
+ 
   const chart = {
     labels: labels_dataShow[0],
     datasets: [

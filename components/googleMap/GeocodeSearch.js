@@ -2,13 +2,12 @@ import { useState, useEffect } from 'react'
 import Geocode from 'react-geocode'
 
 // 申請的google api key
-import { apiKey ,apiKey2 } from '../../pages/stray/googleApi'
+import apiKey,{ apiKey2 } from '@/components/googleMap/googleApi'
 
 function GeocodeSearch(props) {
-
-  useEffect(()=>{
+  useEffect(() => {
     handleGetGeocode(setAddress(props.addressAll))
-  },[])
+  }, [])
 
   const [address, setAddress] = useState(props.addressAll)
 
@@ -35,7 +34,7 @@ function GeocodeSearch(props) {
     Geocode.fromAddress(address).then(
       (response) => {
         const { lat, lng } = response.results[0].geometry.location
-        console.log(lat, lng)
+
         setLat(lat)
         setLng(lng)
       },

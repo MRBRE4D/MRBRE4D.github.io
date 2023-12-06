@@ -11,17 +11,17 @@ export default function StrayDetail() {
   const [stray, setStray] = useState()
 
   const getStray = async (sid) => {
-    console.log(sid)
+
     const res = await fetch(`http://localhost:3005/stray/${sid}`)
-    console.log(res)
+
     const data = await res.json()
-    console.log(data)
+
     setStray(data[0])
   }
 
   useEffect(() => {
     if (router.isReady) {
-      console.log(router.query)
+
       const { sid } = router.query
       getStray(sid)
     }
@@ -31,11 +31,11 @@ export default function StrayDetail() {
   const [lng, setLng] = useState(121.543575)
 
   useEffect(() => {
-    console.log(lat)
+
   }, [lat])
 
   useEffect(() => {
-    console.log(lng)
+
   }, [lng])
 
   const MySwal = withReactContent(Swal)
@@ -94,7 +94,7 @@ export default function StrayDetail() {
       : stray?.color_id == 5
       ? 'orange'
       : ''
-  console.log(color)
+
 
   return (
     <>

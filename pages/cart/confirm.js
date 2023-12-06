@@ -34,8 +34,7 @@ export default function Confirm() {
       setInfo(userObj)
     }
   }, [])
-  console.log('info----------')
-  console.log(info)
+
   // localStorage.setItem(localKey, JSON.stringify(info))
   // 送出alert
 

@@ -10,9 +10,9 @@ export default function Calendar() {
   const [data, setData] = useState([])
   const { auth, setAuth } = useContext(AuthContext)
 
-  // console.log(auth)
+
   const { id } = auth
-  console.log(auth)
+
 
   // 儲存寵物各欄位填入資料用state
   const [dataPet, setDataPet] = useState([])
@@ -238,16 +238,13 @@ export default function Calendar() {
       },
     })
     if (formValues) {
-      console.log('---------')
-      console.log(formValues)
       const data_send = {
         create_time: formValues[0],
         pet_id: formValues[1],
         title: formValues[2],
         detail: formValues[3],
       }
-      console.log('------+++++++++++---')
-      console.log(data_send)
+      
 
       try {
         const res = await fetch('http://localhost:3005/user/pet', {
@@ -298,7 +295,7 @@ export default function Calendar() {
     // 在此處理當月份變更時的邏輯
   }, [now])
 
-  console.log('-------', dataPet)
+
 
   return (
     <>

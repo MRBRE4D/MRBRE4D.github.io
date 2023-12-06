@@ -9,8 +9,7 @@ export default function Websocket() {
   const [messageReceive, setMessageReceive] = useState([])
   // const [authId, setAuthId] = useState(null) // Create a state variable for auth.id
   const { auth, setAuth } = useContext(AuthContext)
-  console.log(auth.id)
-  console.log(auth)
+
   const inputRef = useRef('')
   // const authId = ()=>{
   //   if(auth.id!==0){

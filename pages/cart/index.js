@@ -119,12 +119,7 @@ export default function Index() {
   // 優惠券
   const [coupon, setCoupon] = useState({ isOpen: false, value: null })
   const couponHandler = (e) => setCoupon({ ...coupon, value: e.target.value })
-  console.log(coupon)
-  // console.log({ items })
-  // console.log({ total })
-  // console.log({})
-  // console.log('↓↓↓↓↓ cart ↓↓↓↓↓↓')
-  // console.log(cart)
+
   return (
     <>
       <div className="container mt-120 ">

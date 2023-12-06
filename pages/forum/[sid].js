@@ -27,7 +27,7 @@ export default function Article() {
   const [tryfan, setTryFan] = useState('')
 
   const { id } = auth
-  // console.log('id: ', id)
+
 
   //取單個文章
   const getForum = async (sid) => {
@@ -37,7 +37,7 @@ export default function Article() {
   }
   useEffect(() => {
     if (router.isReady) {
-      // console.log('router query: ', router.query)
+
       const { sid } = router.query
       getForum(sid)
     }
@@ -58,12 +58,12 @@ export default function Article() {
     'attempting to get reply'
     const res = await fetch(`http://localhost:3005/forum/reply${sid}`)
     const data = await res.json()
-    // console.log(data)
+
     setReply(data.result1)
-    // console.log(data.result2[0].count);
+
     setReplyCount(data.result2[0].count)
   }
-  // console.log(reply)
+
 
   //抓sid的所有的資料
   const getForums = async (sid) => {
@@ -101,30 +101,26 @@ export default function Article() {
     setReply(res.data)
     setReplyContent('')
   }
-  // console.log(forum[0]);
+
 
   const fansbtnHandler = async (e) => {
     const res = await axios.post('http://localhost:3005/forum/isfans', {
       id: id,
       u_id: forum[0].u_id,
     })
-    // console.log('tryfans');
-    // console.log(res.data);
-    // console.log(res);
+
     setTryFan(res.data)
   }
 
   const getGood = async (sid) => {
     const res = await fetch(`http://localhost:3005/forum/good${sid}`)
     const data = await res.json()
-    // console.log(data)
-    // console.log(data.result1)
-    // console.log(data.result2[0].count)
+
     setGood(data.result1)
     setGoodCount(data.result2[0].count)
   }
 
-  // console.log(good)
+
   const isGood = async () => {
     const { sid } = router.query
     // const getcatisVaile = good[0] === undefined ? 0 : good[0].cat_isVaild
@@ -133,9 +129,7 @@ export default function Article() {
       art_id: forum[0].art_id,
       isVaile: good,
     })
-    // console.log(good)
-    // console.log('what is the count now')
-    // console.log(res.data.count)
+
     setGoodCount(res.data.count)
     getGood(sid)
   }
@@ -161,12 +155,11 @@ export default function Article() {
     }
   }, [tryfan, reply])
   // reply
-  // console.log(fans);
+
   function createMarkup() {
     return { __html: `${forum[0].art_content}` }
   }
-  // console.log('----------------------------------------replyCount');
-  // console.log(replyCount);
+
 
   return (
     <>

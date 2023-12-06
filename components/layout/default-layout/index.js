@@ -14,7 +14,7 @@ export default function DefaultLayout({ title = '', children }) {
       const navLink = document.querySelectorAll('.nav-scroll-chg')
       const logoImg = document.getElementById('logo')
 
-      // console.log(navLink)
+     
 
       if (window.scrollY == 0) {
         navbar.style.background = 'transparent'

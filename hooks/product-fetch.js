@@ -24,7 +24,7 @@ export const ProductProvider = ({ children }) => {
   //   setPidData(data)
   // }
 
-  // console.log(getData)
+
   useEffect(() => {
     func()
     // getPay()

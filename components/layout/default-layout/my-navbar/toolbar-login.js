@@ -13,7 +13,7 @@ export default function Toolbar({ currentRoute }) {
   // const [data, setData] = useState({})
   const { logoutFirebase } = useFirebase()
   const { cart } = useContext(CartContext)
-  console.log(auth)
+ 
 
   return (
     <ul className="navbar-nav pe-2">

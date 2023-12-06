@@ -27,9 +27,9 @@ export default function Stray() {
       query += `?colorId=${colorId}`
     }
     const res = await fetch(`http://localhost:3005/stray${query}`)
-    // console.log('res=' + res)
+
     const data = await res.json()
-    console.log(data)
+
     setData(data)
   }
   useEffect(() => {
@@ -159,7 +159,6 @@ export default function Stray() {
                 name="color"
                 id="color"
                 onChange={(e) => {
-                  console.log('Running onchange')
                   setColorId(e.target.value)
                 }}
               >
